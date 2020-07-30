@@ -1,5 +1,5 @@
 [package]
-name = "gnusay-rust"
+name = "gnusay"
 version = "0.1.0"
 authors = ["DEADBLACKCLOVER <deadblackclover@protonmail.com>"]
 description = "GNU say made using Rust"
