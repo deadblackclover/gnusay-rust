@@ -2,7 +2,7 @@ use clap::{App, Arg};
 
 fn main() {
     let matches = App::new("gnusay")
-        .version("0.1.0")
+        .version("0.1.1")
         .author("DEADBLACKCLOVER <deadblackclover@protonmail.com>")
         .about("GNU say made using Rust")
         .arg(

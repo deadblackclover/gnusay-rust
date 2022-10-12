@@ -23,7 +23,7 @@ If you have Rust: `cargo install gnusay`
 ## Usage
 
 ```bash
-gnusay 0.1.0
+gnusay 0.1.1
 DEADBLACKCLOVER <deadblackclover@protonmail.com>
 GNU say made using Rust
 
