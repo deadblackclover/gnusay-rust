@@ -20,10 +20,23 @@ GNU say made using Rust
 
 If you have Rust: `cargo install gnusay`
 
+## Build for [wasmtime](https://github.com/bytecodealliance/wasmtime)
+
+```
+rustup target add wasm32-wasi
+cargo wasm-build
+```
+
+and run it
+
+```
+wasmtime target/wasm32-wasi/release/cube-rs.wasm
+```
+
 ## Usage
 
 ```bash
-gnusay 0.1.1
+gnusay 0.2.0
 DEADBLACKCLOVER <deadblackclover@protonmail.com>
 GNU say made using Rust
 
@@ -37,4 +50,3 @@ FLAGS:
 ARGS:
     <TEXT>    Text to display
 ```
-

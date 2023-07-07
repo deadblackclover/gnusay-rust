@@ -2,7 +2,7 @@ use clap::{App, Arg};
 
 fn main() {
     let matches = App::new("gnusay")
-        .version("0.1.1")
+        .version(env!("CARGO_PKG_VERSION"))
         .author("DEADBLACKCLOVER <deadblackclover@protonmail.com>")
         .about("GNU say made using Rust")
         .arg(
@@ -16,8 +16,8 @@ fn main() {
     let text = matches.value_of("TEXT").unwrap();
 
     println!(
-        "   {} \n  <{}>\n   {} ",
-        "_".repeat(text.len()),
+        "   +{}+ \n   |{}|\n   +{}+ ",
+        "-".repeat(text.len()),
         text,
         "-".repeat(text.len())
     );
