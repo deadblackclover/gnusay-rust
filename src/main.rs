@@ -1,25 +1,19 @@
-use clap::{App, Arg};
+use clap::Parser;
+
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    text: String,
+}
 
 fn main() {
-    let matches = App::new("gnusay")
-        .version(env!("CARGO_PKG_VERSION"))
-        .author("DEADBLACKCLOVER <deadblackclover@protonmail.com>")
-        .about("GNU say made using Rust")
-        .arg(
-            Arg::with_name("TEXT")
-                .help("Text to display")
-                .required(true)
-                .index(1),
-        )
-        .get_matches();
-
-    let text = matches.value_of("TEXT").unwrap();
+    let args = Args::parse();
 
     println!(
         "   +{}+ \n   |{}|\n   +{}+ ",
-        "-".repeat(text.len()),
-        text,
-        "-".repeat(text.len())
+        "-".repeat(args.text.len()),
+        args.text,
+        "-".repeat(args.text.len())
     );
     println!("    \\   / \n     \\ / ");
     println!(" .= .-_-. =.\n((_/)o o(\\_)) \n `-'(. .)`-' \n  /| \\_/ |\\ \n ( | GNU | ) \n /'\\_____/'\\ \n \\__)   (__/");

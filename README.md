@@ -2,9 +2,9 @@
 GNU say made using Rust
 
 ```
-   ___________ 
-  <I love GNU!>
-   ----------- 
+   +-----------+ 
+   |I love GNU!|
+   +-----------+ 
     \   / 
      \ / 
  .= .-_-. =.
@@ -30,23 +30,20 @@ cargo wasm-build
 and run it
 
 ```
-wasmtime target/wasm32-wasi/release/cube-rs.wasm
+wasmtime target/wasm32-wasi/release/gnusay.wasm
 ```
 
 ## Usage
 
 ```bash
-gnusay 0.2.0
-DEADBLACKCLOVER <deadblackclover@protonmail.com>
 GNU say made using Rust
 
-USAGE:
-    gnusay <TEXT>
+Usage: gnusay <TEXT>
 
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
+Arguments:
+  <TEXT>  
 
-ARGS:
-    <TEXT>    Text to display
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
 ```
